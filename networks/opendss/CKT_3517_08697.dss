@@ -1,0 +1,37 @@
+! OpenDSS script generated from multiconductor network
+Clear
+
+New Circuit.mc_network basekv=2.4 pu=1.000000 angle=0.00 frequency=60.0 phases=3 Mvasc3=5759.71 Mvasc1=1919.9
+~ bus1=-8888882167616.1.2.3
+
+! Line codes
+New LineCode.2_CLP_2PH_2.4KV_2 nphases=2 units=km Rmatrix=[ 4.340808 | 0 4.340808 ] Xmatrix=[ 0.91496 | 0 0.91496 ] Cmatrix=[ 0 | 0 0 ]
+New LineCode.2_ACSR_2PH_2.4KV_2 nphases=2 units=km Rmatrix=[ 0.148207 | 0 0.148207 ] Xmatrix=[ 0.079678 | 0 0.079678 ] Cmatrix=[ 0 | 0 0 ]
+
+! Lines
+New Line.ND33803486$ND33803473 phases=2 Bus1=33803486.1.2 Bus2=33803473.1.2 LineCode=2_CLP_2PH_2.4KV_2 Length=3.89549 units=km
+New Line.P5015200-2$ND33803473 phases=2 Bus1=33803473.1.2 Bus2=33803389.1.2 LineCode=2_CLP_2PH_2.4KV_2 Length=6.93363 units=km
+New Line.1737295E$ND33803493 phases=2 Bus1=33803364.1.2 Bus2=33803493.1.2 LineCode=2_CLP_2PH_2.4KV_2 Length=5.94418 units=km
+New Line.ND33803493$ND33803486 phases=2 Bus1=33803493.1.2 Bus2=33803486.1.2 LineCode=2_CLP_2PH_2.4KV_2 Length=7.26847 units=km
+New Line.08697$1737295E phases=2 Bus1=-8888882167616.1.2 Bus2=33803363.1.2 LineCode=2_ACSR_2PH_2.4KV_2 Length=0.148865 units=km
+
+! Switches
+New Line.5015200:P5015200-1 phases=2 Bus1=33803381.1.2 Bus2=-77777733803381.1.2 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.5015200:P5015200-2 phases=2 Bus1=33803389.1.2 Bus2=33803381.1.2 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.1737295E:1737295E phases=2 Bus1=33803363.1.2 Bus2=33803364.1.2 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+
+! Loads
+New Load.5015200_0 Bus1=-99999933803381.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.5015200_1 Bus1=-99999933803381.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+
+! Transformers
+New Transformer.293588B195C2EE34E0637F61810A7CE3_0_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=33803381.3.0 kV=1.3856 kVA=25 conn=wye
+~ wdg=2 bus=-99999933803381.3.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588B195C2EE34E0637F61810A7CE3_0_1 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=33803381.1.0 kV=1.3856 kVA=25 conn=wye
+~ wdg=2 bus=-99999933803381.1.0 kV=0.069282 kVA=25 conn=wye
+
+Set voltagebases=[2.4 0.12]
+CalcVoltageBases
+Solve

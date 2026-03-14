@@ -1,0 +1,504 @@
+! OpenDSS script generated from multiconductor network
+Clear
+
+New Circuit.mc_network basekv=4.0 pu=1.000000 angle=0.00 frequency=60.0 phases=3 Mvasc3=15999.2 Mvasc1=5333.07
+~ bus1=-8888882170457.1.2.3
+
+! Line codes
+New LineCode.1/0_JCN_3PH_4KV_3 nphases=3 units=km Rmatrix=[ 0.012009 | 0 0.012009 | 0 0 0.012009 ] Xmatrix=[ 0.00367 | 0 0.00367 | 0 0 0.00367 ] Cmatrix=[ 0 | 0 0 | 0 0 0 ]
+New LineCode.1/0_JCN_1PH_4KV_1 nphases=1 units=km Rmatrix=[ 0.066506 ] Xmatrix=[ 0.020327 ] Cmatrix=[ 0 ]
+New LineCode.1/0_ACSR_3PH_1/0_ACSR_N_4KV_4 nphases=4 units=km Rmatrix=[ 0.032148 | 0 0.032148 | 0 0 0.032148 | 0 0 0 0.032148 ] Xmatrix=[ 0.023233 | 0 0.023233 | 0 0 0.023233 | 0 0 0 0.023233 ] Cmatrix=[ 0 | 0 0 | 0 0 0 | 0 0 0 0 ]
+New LineCode.6_CU_3PH_6_CU_N_4KV_4 nphases=4 units=km Rmatrix=[ 0.071305 | 0 0.071305 | 0 0 0.071305 | 0 0 0 0.071305 ] Xmatrix=[ 0.023028 | 0 0.023028 | 0 0 0.023028 | 0 0 0 0.023028 ] Cmatrix=[ 0 | 0 0 | 0 0 0 | 0 0 0 0 ]
+New LineCode.1/0_ACSR_1PH_1/0_ACSR_N_4KV_2_N nphases=2 units=km Rmatrix=[ 0.053781 | 0 0.053781 ] Xmatrix=[ 0.038867 | 0 0.038867 ] Cmatrix=[ 0 | 0 0 ]
+New LineCode.4_CU_3PH_4_CU_N_4KV_4 nphases=4 units=km Rmatrix=[ 0.002602 | 0 0.002602 | 0 0 0.002602 | 0 0 0 0.002602 ] Xmatrix=[ 0.001288 | 0 0.001288 | 0 0 0.001288 | 0 0 0 0.001288 ] Cmatrix=[ 0 | 0 0 | 0 0 0 | 0 0 0 0 ]
+New LineCode.6_CU_1PH_6_CU_N_4KV_2_N nphases=2 units=km Rmatrix=[ 0.390943 | 0 0.390943 ] Xmatrix=[ 0.126257 | 0 0.126257 ] Cmatrix=[ 0 | 0 0 ]
+New LineCode.1/0_ACSR_1PH_4KV_1 nphases=1 units=km Rmatrix=[ 0.021177 ] Xmatrix=[ 0.016861 ] Cmatrix=[ 0 ]
+New LineCode.4_ACSR_1PH_4_ACSR_N_4KV_2_N nphases=2 units=km Rmatrix=[ 0.084389 | 0 0.084389 ] Xmatrix=[ 0.028385 | 0 0.028385 ] Cmatrix=[ 0 | 0 0 ]
+New LineCode.4_ACSR_3PH_4_ACSR_N_4KV_4 nphases=4 units=km Rmatrix=[ 0.168405 | 0 0.168405 | 0 0 0.168405 | 0 0 0 0.168405 ] Xmatrix=[ 0.056644 | 0 0.056644 | 0 0 0.056644 | 0 0 0 0.056644 ] Cmatrix=[ 0 | 0 0 | 0 0 0 | 0 0 0 0 ]
+New LineCode.350_EPR_3PH_4KV_3 nphases=3 units=km Rmatrix=[ 1e-05 | 0 1e-05 | 0 0 1e-05 ] Xmatrix=[ 1e-05 | 0 1e-05 | 0 0 1e-05 ] Cmatrix=[ 0 | 0 0 | 0 0 0 ]
+New LineCode.2_CU_3PH_4KV_3 nphases=3 units=km Rmatrix=[ 1e-05 | 0 1e-05 | 0 0 1e-05 ] Xmatrix=[ 1e-05 | 0 1e-05 | 0 0 1e-05 ] Cmatrix=[ 0 | 0 0 | 0 0 0 ]
+
+! Lines
+New Line.182042657$4833736E phases=3 Bus1=182042575.1.2.3 Bus2=182042659.1.2.3 LineCode=1/0_JCN_3PH_4KV_3 Length=0.005212 units=km
+New Line.182042657$ND212445840 phases=3 Bus1=182042660.1.2.3 Bus2=212445840.1.2.3 LineCode=1/0_JCN_3PH_4KV_3 Length=0.007015 units=km
+New Line.ND212445840$182042684 phases=3 Bus1=212445840.1.2.3 Bus2=182042687.1.2.3 LineCode=1/0_JCN_3PH_4KV_3 Length=0.007036 units=km
+New Line.ND212445840$P5609378-2 phases=1 Bus1=212445840.1 Bus2=212445864.1 LineCode=1/0_JCN_1PH_4KV_1 Length=0.094268 units=km
+New Line.182042684$182042717 phases=3 Bus1=182042686.1.2.3 Bus2=182042719.1.2.3 LineCode=1/0_JCN_3PH_4KV_3 Length=0.153795 units=km
+New Line.182042717$182042705 phases=3 Bus1=182042720.1.2.3 Bus2=182042708.1.2.3 LineCode=1/0_JCN_3PH_4KV_3 Length=0.014806 units=km
+New Line.182042705$563034S phases=3 Bus1=182042707.1.2.3 Bus2=182042487.1.2.3 LineCode=1/0_JCN_3PH_4KV_3 Length=0.007187 units=km
+New Line.4772818E$4909240E phases=4 Bus1=40764465.0.1.2.3 Bus2=219416798.0.1.2.3 LineCode=1/0_ACSR_3PH_1/0_ACSR_N_4KV_4 Length=0.018184 units=km
+New Line.4772818E$219416829 phases=3 Bus1=219416799.1.2.3 Bus2=219416831.1.2.3 LineCode=1/0_JCN_3PH_4KV_3 Length=0.030925 units=km
+New Line.219416841$219416829 phases=3 Bus1=219416832.1.2.3 Bus2=219416844.1.2.3 LineCode=1/0_JCN_3PH_4KV_3 Length=0.017035 units=km
+New Line.1738357E$ND40765338 phases=4 Bus1=40764270.0.1.2.3 Bus2=40765338.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.048016 units=km
+New Line.PD0188$ND40765338 phases=4 Bus1=40765338.0.1.2.3 Bus2=40765182.0.1.2.3 LineCode=1/0_ACSR_3PH_1/0_ACSR_N_4KV_4 Length=0.066207 units=km
+New Line.ND40765338$ND40765326 phases=4 Bus1=40765338.0.1.2.3 Bus2=40765326.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.060747 units=km
+New Line.ND40765326$1737753E phases=4 Bus1=40765326.0.1.2.3 Bus2=40764692.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.060553 units=km
+New Line.ND40765326$426794S phases=2 Bus1=40765326.0.3 Bus2=40764984.0.3 LineCode=1/0_ACSR_1PH_1/0_ACSR_N_4KV_2_N Length=0.055386 units=km
+New Line.PD0189$ND40765326 phases=4 Bus1=40765326.0.1.2.3 Bus2=40765249.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.048292 units=km
+New Line.1737753E$4613072E phases=4 Bus1=40764692.0.1.2.3 Bus2=40763979.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.255535 units=km
+New Line.PD0188$ND40765387 phases=4 Bus1=40765181.0.1.2.3 Bus2=40765387.0.1.2.3 LineCode=1/0_ACSR_3PH_1/0_ACSR_N_4KV_4 Length=0.125074 units=km
+New Line.ND40765387$2001825E phases=4 Bus1=40765387.0.1.2.3 Bus2=40764106.0.1.2.3 LineCode=1/0_ACSR_3PH_1/0_ACSR_N_4KV_4 Length=0.21033 units=km
+New Line.1755360E$ND40765387 phases=4 Bus1=40765387.0.1.2.3 Bus2=40765278.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.002394 units=km
+New Line.1755360ET1$ND40765387 phases=4 Bus1=40765387.0.1.2.3 Bus2=40765291.0.1.2.3 LineCode=1/0_ACSR_3PH_1/0_ACSR_N_4KV_4 Length=0.003249 units=km
+New Line.PD0189$ND40765432 phases=4 Bus1=40765250.0.1.2.3 Bus2=40765432.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.062972 units=km
+New Line.4613072E$ND40765575 phases=4 Bus1=40763979.0.1.2.3 Bus2=40765575.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.152554 units=km
+New Line.ND40765432$ND238939960 phases=4 Bus1=40765432.0.1.2.3 Bus2=238939960.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.105117 units=km
+New Line.ND40765575$1906342E phases=4 Bus1=40765575.0.1.2.3 Bus2=40764004.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.057937 units=km
+New Line.2001825E$4185244E phases=4 Bus1=40764106.0.1.2.3 Bus2=40764135.0.1.2.3 LineCode=1/0_ACSR_3PH_1/0_ACSR_N_4KV_4 Length=0.053328 units=km
+New Line.ND40765575$327771S phases=2 Bus1=40765575.0.3 Bus2=40764719.0.3 LineCode=6_CU_1PH_6_CU_N_4KV_2_N Length=0.049776 units=km
+New Line.ND40765432$50470CIT phases=4 Bus1=40765432.0.1.2.3 Bus2=40764809.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.076145 units=km
+New Line.ND40765432$4606895E phases=2 Bus1=40765432.0.2 Bus2=40764909.0.2 LineCode=6_CU_1PH_6_CU_N_4KV_2_N Length=0.108544 units=km
+New Line.ND238939960$4988502E phases=1 Bus1=238939960.2 Bus2=238939972.2 LineCode=1/0_ACSR_1PH_4KV_1 Length=0.033108 units=km
+New Line.ND238939960$4988501E phases=1 Bus1=238939960.2 Bus2=238939978.2 LineCode=1/0_ACSR_1PH_4KV_1 Length=0.031531 units=km
+New Line.2002110E$50470CIT phases=4 Bus1=40764809.0.1.2.3 Bus2=40764029.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.135772 units=km
+New Line.327771S$19193CIT phases=2 Bus1=40764719.0.3 Bus2=40764834.0.3 LineCode=4_ACSR_1PH_4_ACSR_N_4KV_2_N Length=0.058781 units=km
+New Line.4185244E$4265391E phases=4 Bus1=40764135.0.1.2.3 Bus2=40764884.0.1.2.3 LineCode=1/0_ACSR_3PH_1/0_ACSR_N_4KV_4 Length=0.079754 units=km
+New Line.1958715E$ND40765315 phases=4 Bus1=40764079.0.1.2.3 Bus2=40765315.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.00537 units=km
+New Line.ND222681918$ND40765363 phases=4 Bus1=222681918.0.1.2.3 Bus2=40765363.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.05044 units=km
+New Line.ND40765363$BF00127 phases=4 Bus1=40765363.0.1.2.3 Bus2=233099862.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.095252 units=km
+New Line.ND40765315$327015S phases=2 Bus1=40765315.0.3 Bus2=40764390.0.3 LineCode=6_CU_1PH_6_CU_N_4KV_2_N Length=0.158214 units=km
+New Line.ND40765363$021S phases=4 Bus1=40765363.0.1.2.3 Bus2=40764727.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.002785 units=km
+New Line.327015S$4616718E phases=2 Bus1=40764390.0.3 Bus2=108152659.0.3 LineCode=6_CU_1PH_6_CU_N_4KV_2_N Length=0.058564 units=km
+New Line.BF00127$2085191E phases=4 Bus1=233099863.0.1.2.3 Bus2=40764311.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.017131 units=km
+New Line.2085191E$ND40765603 phases=4 Bus1=40764311.0.1.2.3 Bus2=40765603.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.008118 units=km
+New Line.ND40765603$4770130E phases=2 Bus1=40765603.0.1 Bus2=40764262.0.1 LineCode=4_ACSR_1PH_4_ACSR_N_4KV_2_N Length=0.059271 units=km
+New Line.ND40765603$4289030E phases=4 Bus1=40765603.0.1.2.3 Bus2=40765084.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.051611 units=km
+New Line.4289030E$178559E phases=4 Bus1=40765084.0.1.2.3 Bus2=203746181.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.090409 units=km
+New Line.1755360E$1907023E phases=4 Bus1=40765279.0.1.2.3 Bus2=40764934.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.062884 units=km
+New Line.1755360ET1$426751S phases=4 Bus1=40765292.0.1.2.3 Bus2=40765009.0.1.2.3 LineCode=1/0_ACSR_3PH_1/0_ACSR_N_4KV_4 Length=0.050246 units=km
+New Line.ND238939960$4512080E phases=4 Bus1=238939960.0.1.2.3 Bus2=40765134.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.109321 units=km
+New Line.1906342E$ND40765618 phases=4 Bus1=40764004.0.1.2.3 Bus2=40765618.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.200209 units=km
+New Line.4265391E$1737857E phases=4 Bus1=40764884.0.1.2.3 Bus2=40764162.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.180183 units=km
+New Line.19193CIT$263620S phases=2 Bus1=40764834.0.3 Bus2=40764415.0.3 LineCode=6_CU_1PH_6_CU_N_4KV_2_N Length=0.12548 units=km
+New Line.ND40765618$263616S phases=2 Bus1=40765618.0.3 Bus2=40764440.0.3 LineCode=6_CU_1PH_6_CU_N_4KV_2_N Length=0.068625 units=km
+New Line.1907023E$4343877E phases=4 Bus1=40764934.0.1.2.3 Bus2=40765059.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.049266 units=km
+New Line.2002110E$1958713E phases=4 Bus1=40764029.0.1.2.3 Bus2=40765109.0.1.2.3 LineCode=4_ACSR_3PH_4_ACSR_N_4KV_4 Length=0.071116 units=km
+New Line.4512080E$ND40765440 phases=4 Bus1=40765134.0.1.2.3 Bus2=40765440.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.107555 units=km
+New Line.1958713E$1599986E phases=4 Bus1=40765109.0.1.2.3 Bus2=40764054.0.1.2.3 LineCode=4_ACSR_3PH_4_ACSR_N_4KV_4 Length=0.109288 units=km
+New Line.1737857E$2085193E phases=4 Bus1=40764162.0.1.2.3 Bus2=40764187.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.147347 units=km
+New Line.ND40765440$26301S phases=2 Bus1=40765440.0.2 Bus2=40764640.0.2 LineCode=6_CU_1PH_6_CU_N_4KV_2_N Length=0.065999 units=km
+New Line.4343877E$4613053E phases=4 Bus1=40765059.0.1.2.3 Bus2=40765034.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.089687 units=km
+New Line.263616S$4715286E phases=2 Bus1=40764440.0.3 Bus2=40765350.0.3 LineCode=6_CU_1PH_6_CU_N_4KV_2_N Length=0.030052 units=km
+New Line.4770130E$4072301E phases=2 Bus1=40764262.0.1 Bus2=40764237.0.1 LineCode=4_ACSR_1PH_4_ACSR_N_4KV_2_N Length=0.054765 units=km
+New Line.178559E$ND40765568 phases=4 Bus1=203746181.0.1.2.3 Bus2=40765568.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.014575 units=km
+New Line.ND40765568$2001948E phases=4 Bus1=40765568.0.1.2.3 Bus2=40764212.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.027716 units=km
+New Line.ND40765568$4259902E phases=2 Bus1=40765568.0.3 Bus2=40764665.0.3 LineCode=4_ACSR_1PH_4_ACSR_N_4KV_2_N Length=0.063522 units=km
+New Line.2001948E$563026S phases=4 Bus1=40764212.0.1.2.3 Bus2=40764590.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.076224 units=km
+New Line.563026S$563028S phases=4 Bus1=40764590.0.1.2.3 Bus2=40764565.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.111475 units=km
+New Line.563028S$ND182042453 phases=4 Bus1=40764565.0.1.2.3 Bus2=182042453.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.036047 units=km
+New Line.ND182042453$563029S phases=4 Bus1=182042453.0.1.2.3 Bus2=40764540.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.068088 units=km
+New Line.563029S$ND182042471 phases=4 Bus1=40764540.0.1.2.3 Bus2=182042471.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.057431 units=km
+New Line.4833736E$ND182042471 phases=4 Bus1=182042471.0.1.2.3 Bus2=182042574.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.012273 units=km
+New Line.4989764E$ND182042471 phases=4 Bus1=182042471.0.1.2.3 Bus2=40764515.0.1.2.3 LineCode=1/0_ACSR_3PH_1/0_ACSR_N_4KV_4 Length=0.100943 units=km
+New Line.4909240E$563034S phases=4 Bus1=182042486.0.1.2.3 Bus2=40764465.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.029711 units=km
+New Line.2085193E$ND222681918 phases=4 Bus1=40764187.0.1.2.3 Bus2=222681918.0.1.2.3 LineCode=4_CU_3PH_4_CU_N_4KV_4 Length=0.105929 units=km
+New Line.1958715E$1599986E phases=4 Bus1=40764054.0.1.2.3 Bus2=40764079.0.1.2.3 LineCode=6_CU_3PH_6_CU_N_4KV_4 Length=0.124818 units=km
+New Line.4719072E$26301S phases=2 Bus1=40764640.0.2 Bus2=40764615.0.2 LineCode=6_CU_1PH_6_CU_N_4KV_2_N Length=0.207006 units=km
+New Line.ND40765315$ND215216261 phases=2 Bus1=40765315.0.1 Bus2=-77777740765315.0.1 LineCode=6_CU_1PH_6_CU_N_4KV_2_N Length=0.183638 units=km
+New Line.10686$1738357E phases=3 Bus1=-8888882170457.1.2.3 Bus2=40764271.1.2.3 LineCode=350_EPR_3PH_4KV_3 Length=0.127685 units=km
+New Line.021S$ND40764788 phases=3 Bus1=40764728.1.2.3 Bus2=40764766.1.2.3 LineCode=2_CU_3PH_4KV_3 Length=0.018623 units=km
+New Line.219416841$P5574065-1 phases=3 Bus1=219416843.1.2.3 Bus2=219416857.1.2.3 LineCode=1/0_JCN_3PH_4KV_3 Length=0.040601 units=km
+
+! Switches
+New Line.1755360E:1755360ET1 phases=3 Bus1=40765291.1.2.3 Bus2=40765292.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.40764773$P5424473 phases=3 Bus1=40764766.1.2.3 Bus2=40764767.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.182042657 phases=3 Bus1=182042659.1.2.3 Bus2=182042660.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.182042684 phases=3 Bus1=182042687.1.2.3 Bus2=182042686.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.182042717 phases=3 Bus1=182042719.1.2.3 Bus2=182042720.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.182042705 phases=3 Bus1=182042708.1.2.3 Bus2=182042707.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.219416829 phases=3 Bus1=219416831.1.2.3 Bus2=219416832.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.219416841 phases=3 Bus1=219416844.1.2.3 Bus2=219416843.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.1756358E:PD0188 phases=3 Bus1=40765182.1.2.3 Bus2=40765181.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.1738361E:PD0189 phases=3 Bus1=40765249.1.2.3 Bus2=40765250.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.1755360E:1755360E phases=3 Bus1=40765278.1.2.3 Bus2=40765279.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.1738357E:1738357E phases=3 Bus1=40764271.1.2.3 Bus2=40764270.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.563021S:021S phases=3 Bus1=40764727.1.2.3 Bus2=40764728.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4833736E:4833736E phases=3 Bus1=182042574.1.2.3 Bus2=182042575.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.563034SP1:563034S phases=3 Bus1=182042487.1.2.3 Bus2=182042486.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4772818E:4772818E phases=3 Bus1=219416798.1.2.3 Bus2=219416799.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.5609378:P5609378-2 phases=1 Bus1=212445864.1 Bus2=212445856.1 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.1737753E:40764672 phases=3 Bus1=40764674.1.2.3 Bus2=40764675.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.426794S:40764966 phases=1 Bus1=40764968.3 Bus2=40764969.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4613072E:40763961 phases=3 Bus1=40763963.1.2.3 Bus2=40763964.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.2001825E:40764086 phases=3 Bus1=40764088.1.2.3 Bus2=40764089.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.1599986E:40764036 phases=3 Bus1=40764038.1.2.3 Bus2=40764039.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.2085193E:40764169 phases=3 Bus1=40764171.1.2.3 Bus2=40764172.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.26301S:40764622 phases=1 Bus1=40764624.2 Bus2=40764625.2 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4613053E:40765016 phases=3 Bus1=40765018.1.2.3 Bus2=40765019.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.1958715E:40764061 phases=3 Bus1=40764063.1.2.3 Bus2=40764064.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4719072E:40764597 phases=1 Bus1=40764599.2 Bus2=40764600.2 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.327015S:40764372 phases=1 Bus1=40764374.3 Bus2=40764375.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4616718E:108152640 phases=1 Bus1=108152642.3 Bus2=108152643.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.2085191E:40764293 phases=3 Bus1=40764295.1.2.3 Bus2=40764296.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.1906342E:40763986 phases=3 Bus1=40763988.1.2.3 Bus2=40763989.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4185244E:40764115 phases=3 Bus1=40764117.1.2.3 Bus2=40764118.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.327771S:40764701 phases=1 Bus1=40764703.3 Bus2=40764704.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.50470CIT:40764791 phases=3 Bus1=40764793.1.2.3 Bus2=40764794.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4606895E:40764891 phases=1 Bus1=40764893.2 Bus2=40764894.2 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4988502E:238939982 phases=1 Bus1=238939984.2 Bus2=238939985.2 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4988501E:238940011 phases=1 Bus1=238940013.2 Bus2=238940014.2 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.2002110E:40764011 phases=3 Bus1=40764013.1.2.3 Bus2=40764014.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.19193CIT:40764816 phases=1 Bus1=40764818.3 Bus2=40764819.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4265391E:40764866 phases=3 Bus1=40764868.1.2.3 Bus2=40764869.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.1907023E:40764916 phases=3 Bus1=40764918.1.2.3 Bus2=40764919.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.426751S:40764991 phases=3 Bus1=40764993.1.2.3 Bus2=40764994.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4512080E:40765116 phases=3 Bus1=40765118.1.2.3 Bus2=40765119.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4770130E:40764244 phases=1 Bus1=40764246.1 Bus2=40764247.1 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4289030E:40765066 phases=3 Bus1=40765068.1.2.3 Bus2=40765069.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.178559E:203746162 phases=3 Bus1=203746164.1.2.3 Bus2=203746165.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4072301E:40764219 phases=1 Bus1=40764221.1 Bus2=40764222.1 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.2001948E:40764194 phases=3 Bus1=40764196.1.2.3 Bus2=40764197.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4259902E:40764647 phases=1 Bus1=40764649.3 Bus2=40764650.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.563026S:40764572 phases=3 Bus1=40764574.1.2.3 Bus2=40764575.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.563028S:40764547 phases=3 Bus1=40764549.1.2.3 Bus2=40764550.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.563029S:40764522 phases=3 Bus1=40764524.1.2.3 Bus2=40764525.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4989764E:40764497 phases=3 Bus1=40764499.1.2.3 Bus2=40764500.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4909240E:40764447 phases=3 Bus1=40764449.1.2.3 Bus2=40764450.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.1737857E:40764144 phases=3 Bus1=40764146.1.2.3 Bus2=40764147.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.263620S:40764397 phases=1 Bus1=40764399.3 Bus2=40764400.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.263616S:40764422 phases=1 Bus1=40764424.3 Bus2=40764425.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4343877E:40765041 phases=3 Bus1=40765043.1.2.3 Bus2=40765044.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.1958713E:40765091 phases=3 Bus1=40765093.1.2.3 Bus2=40765094.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4988772E:BF00127 phases=3 Bus1=233099862.1.2.3 Bus2=233099863.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4715286E:140969742 phases=1 Bus1=140969744.3 Bus2=140969745.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.5574065:P5574065-1 phases=3 Bus1=219416857.1.2.3 Bus2=219416858.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_1737753E:1737753E phases=3 Bus1=40764692.1.2.3 Bus2=40764674.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_426794S:426794S phases=3 Bus1=40764984.1.2.3 Bus2=40764968.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4613072E:4613072E phases=3 Bus1=40763979.1.2.3 Bus2=40763963.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_1906342E:1906342E phases=3 Bus1=40764004.1.2.3 Bus2=40763988.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4616718E:4616718E phases=3 Bus1=108152659.1.2.3 Bus2=108152642.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4512080E:4512080E phases=3 Bus1=40765134.1.2.3 Bus2=40765118.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4343877E:4343877E phases=3 Bus1=40765059.1.2.3 Bus2=40765043.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_178559E:178559E phases=3 Bus1=203746181.1.2.3 Bus2=203746164.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_2001825E:2001825E phases=3 Bus1=40764106.1.2.3 Bus2=40764088.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4185244E:4185244E phases=3 Bus1=40764135.1.2.3 Bus2=40764117.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_327771S:327771S phases=3 Bus1=40764719.1.2.3 Bus2=40764703.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_50470CIT:50470CIT phases=3 Bus1=40764809.1.2.3 Bus2=40764793.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4606895E:4606895E phases=3 Bus1=40764909.1.2.3 Bus2=40764893.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_1958715E:1958715E phases=3 Bus1=40764079.1.2.3 Bus2=40764063.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4719072E:4719072E phases=3 Bus1=40764615.1.2.3 Bus2=40764599.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_327015S:327015S phases=3 Bus1=40764390.1.2.3 Bus2=40764374.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_2085191E:2085191E phases=3 Bus1=40764311.1.2.3 Bus2=40764295.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4988502E:4988502E phases=3 Bus1=238939972.1.2.3 Bus2=238939984.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4988501E:4988501E phases=3 Bus1=238939978.1.2.3 Bus2=238940013.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_2002110E:2002110E phases=3 Bus1=40764029.1.2.3 Bus2=40764013.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_19193CIT:19193CIT phases=3 Bus1=40764834.1.2.3 Bus2=40764818.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4265391E:4265391E phases=3 Bus1=40764884.1.2.3 Bus2=40764868.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_1907023E:1907023E phases=3 Bus1=40764934.1.2.3 Bus2=40764918.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_426751S:426751S phases=3 Bus1=40765009.1.2.3 Bus2=40764993.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_1737857E:1737857E phases=3 Bus1=40764162.1.2.3 Bus2=40764146.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_263620S:263620S phases=3 Bus1=40764415.1.2.3 Bus2=40764399.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_263616S:263616S phases=3 Bus1=40764440.1.2.3 Bus2=40764424.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_1958713E:1958713E phases=3 Bus1=40765109.1.2.3 Bus2=40765093.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4770130E:4770130E phases=3 Bus1=40764262.1.2.3 Bus2=40764246.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4289030E:4289030E phases=3 Bus1=40765084.1.2.3 Bus2=40765068.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4072301E:4072301E phases=3 Bus1=40764237.1.2.3 Bus2=40764221.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_2001948E:2001948E phases=3 Bus1=40764212.1.2.3 Bus2=40764196.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4259902E:4259902E phases=3 Bus1=40764665.1.2.3 Bus2=40764649.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_563026S:563026S phases=3 Bus1=40764590.1.2.3 Bus2=40764574.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_563028S:563028S phases=3 Bus1=40764565.1.2.3 Bus2=40764549.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_563029S:563029S phases=3 Bus1=40764540.1.2.3 Bus2=40764524.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4989764E:4989764E phases=3 Bus1=40764515.1.2.3 Bus2=40764499.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4909240E:4909240E phases=3 Bus1=40764465.1.2.3 Bus2=40764449.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4715286E:4715286E phases=3 Bus1=40765350.1.2.3 Bus2=140969744.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_1599986E:1599986E phases=3 Bus1=40764054.1.2.3 Bus2=40764038.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_2085193E:2085193E phases=3 Bus1=40764187.1.2.3 Bus2=40764171.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_26301S:26301S phases=3 Bus1=40764640.1.2.3 Bus2=40764624.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.CAB_4613053E:4613053E phases=3 Bus1=40765034.1.2.3 Bus2=40765018.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.5609378:P5609378-1 phases=1 Bus1=212445856.1 Bus2=-777777212445856.1 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+
+! Loads
+New Load.4613072E Bus1=-99999940763964.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4770130E Bus1=-99999940764247.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4289030E_0 Bus1=-99999940765069.1.2 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4289030E_1 Bus1=-99999940765069.2.3 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4289030E_2 Bus1=-99999940765069.3.1 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.5609378 Bus1=-999999212445856.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.5574065_0 Bus1=-999999219416858.1.0 phases=1 kV=0.159926 kW=0 kvar=0 model=1
+New Load.5574065_1 Bus1=-999999219416858.2.0 phases=1 kV=0.159926 kW=0 kvar=0 model=1
+New Load.5574065_2 Bus1=-999999219416858.3.0 phases=1 kV=0.159926 kW=0 kvar=0 model=1
+New Load.4259902E Bus1=-99999940764650.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.2001948E Bus1=-99999940764197.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.563028S Bus1=-99999940764550.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.263616S Bus1=-99999940764425.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.263620S Bus1=-99999940764400.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.1737857E Bus1=-99999940764147.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.1958713E Bus1=-99999940765094.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4343877E_0 Bus1=-99999940765044.1.2 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4343877E_1 Bus1=-99999940765044.2.3 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4343877E_2 Bus1=-99999940765044.3.1 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.563029S Bus1=-99999940764525.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.2085191E_0 Bus1=-99999940764296.1.2 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.2085191E_1 Bus1=-99999940764296.2.3 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.2085191E_2 Bus1=-99999940764296.3.1 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4989764E_0 Bus1=-99999940764500.1.2 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4989764E_1 Bus1=-99999940764500.2.3 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4989764E_2 Bus1=-99999940764500.3.1 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4185244E Bus1=-99999940764118.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.50470CIT Bus1=-99999940764794.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.327771S Bus1=-99999940764704.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4606895E Bus1=-99999940764894.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4909240E Bus1=-99999940764450.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.1906342E Bus1=-99999940763989.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4719072E Bus1=-99999940764600.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.1958715E Bus1=-99999940764064.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.563026S Bus1=-99999940764575.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.2002110E Bus1=-99999940764014.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4988501E Bus1=-999999238940014.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.1907023E_0 Bus1=-99999940764919.1.2 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.1907023E_1 Bus1=-99999940764919.2.3 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.1907023E_2 Bus1=-99999940764919.3.1 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.19193CIT Bus1=-99999940764819.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4265391E Bus1=-99999940764869.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4988502E Bus1=-999999238939985.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.426751S_0 Bus1=-99999940764994.1.2 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.426751S_1 Bus1=-99999940764994.2.3 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.426751S_2 Bus1=-99999940764994.3.1 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4512080E Bus1=-99999940765119.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.26301S Bus1=-99999940764625.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4613053E Bus1=-99999940765019.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.2085193E Bus1=-99999940764172.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.1599986E Bus1=-99999940764039.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4715286E Bus1=-999999140969745.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.327015S Bus1=-99999940764375.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.2001825E Bus1=-99999940764089.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.1737753E Bus1=-99999940764675.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.426794S Bus1=-99999940764969.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4072301E Bus1=-99999940764222.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.178559E Bus1=-999999203746165.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.5424473_0 Bus1=-99999940764767.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.5424473_1 Bus1=-99999940764767.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.5424473_2 Bus1=-99999940764767.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+New Load.4616718E Bus1=-999999108152643.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=1
+
+! Generators
+New Generator.SBP-101951_BATTERY Bus1=-99999940764894.1.0 phases=1 kV=0.069282 kW=3.454 kvar=0 model=7
+New Generator.SBP-101951_PHOTOVOLTAIC Bus1=-99999940764894.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.NST-167393_PHOTOVOLTAIC Bus1=-99999940763964.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-115966_BATTERY Bus1=-99999940763964.3.0 phases=1 kV=0.069282 kW=1.326 kvar=0 model=7
+New Generator.SBP-115966_PHOTOVOLTAIC Bus1=-99999940763964.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.NST-14655_PHOTOVOLTAIC Bus1=-99999940764247.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.NST-67618_PHOTOVOLTAIC_0 Bus1=-99999940765069.1.2 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.NST-67618_PHOTOVOLTAIC_1 Bus1=-99999940765069.2.3 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.NST-67618_PHOTOVOLTAIC_2 Bus1=-99999940765069.3.1 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.500459003_PHOTOVOLTAIC Bus1=-99999940764600.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SCE-42876_PHOTOVOLTAIC Bus1=-99999940764064.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.500470040_PHOTOVOLTAIC Bus1=-99999940764064.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.NST-293814_PHOTOVOLTAIC Bus1=-99999940764064.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.NST-432122_PHOTOVOLTAIC Bus1=-99999940764064.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-05885_PHOTOVOLTAIC Bus1=-99999940764064.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-60537_PHOTOVOLTAIC Bus1=-99999940764039.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-60537_BATTERY Bus1=-99999940764039.3.0 phases=1 kV=0.069282 kW=2.073 kvar=0 model=7
+New Generator.SBP-00306_PHOTOVOLTAIC Bus1=-99999940764675.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.NST-310440_PHOTOVOLTAIC Bus1=-99999940764969.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.NST-262837_PHOTOVOLTAIC Bus1=-99999940764969.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-15761_BATTERY_0 Bus1=-99999940764296.1.2 phases=1 kV=0.069282 kW=0.147 kvar=0 model=7
+New Generator.SBP-15761_BATTERY_1 Bus1=-99999940764296.2.3 phases=1 kV=0.069282 kW=0.147 kvar=0 model=7
+New Generator.SBP-15761_BATTERY_2 Bus1=-99999940764296.3.1 phases=1 kV=0.069282 kW=0.147 kvar=0 model=7
+New Generator.SBP-15761_PHOTOVOLTAIC_0 Bus1=-99999940764296.1.2 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-15761_PHOTOVOLTAIC_1 Bus1=-99999940764296.2.3 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-15761_PHOTOVOLTAIC_2 Bus1=-99999940764296.3.1 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-01563_PHOTOVOLTAIC Bus1=-99999940764575.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-108581_BATTERY Bus1=-99999940764575.1.0 phases=1 kV=0.069282 kW=3.453 kvar=0 model=7
+New Generator.SBP-108581_PHOTOVOLTAIC Bus1=-99999940764575.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-45511_PHOTOVOLTAIC Bus1=-99999940764197.2.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-45511_BATTERY Bus1=-99999940764197.2.0 phases=1 kV=0.069282 kW=0.441 kvar=0 model=7
+New Generator.NST-502035_PHOTOVOLTAIC Bus1=-99999940764014.1.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-105715_PHOTOVOLTAIC Bus1=-99999940764425.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-90621_BATTERY Bus1=-99999940764425.3.0 phases=1 kV=0.069282 kW=1.326 kvar=0 model=7
+New Generator.SBP-37350_PHOTOVOLTAIC Bus1=-99999940764425.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.SBP-105715_BATTERY Bus1=-99999940764425.3.0 phases=1 kV=0.069282 kW=1.326 kvar=0 model=7
+New Generator.SBP-90621_PHOTOVOLTAIC Bus1=-99999940764425.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+New Generator.NST-269118_PHOTOVOLTAIC Bus1=-99999940764400.3.0 phases=1 kV=0.069282 kW=0 kvar=0 model=7
+
+! Transformers
+New Transformer.293588A43315EE34E0637F61810A7CE3_0_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764675.1.0 kV=2.3094 kVA=50 conn=wye
+~ wdg=2 bus=-99999940764675.1.0 kV=0.069282 kVA=50 conn=wye
+New Transformer.293588A6C5AAEE34E0637F61810A7CE3_1_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764147.1.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764147.1.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588A606ACEE34E0637F61810A7CE3_2_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40765094.1.0 kV=2.3094 kVA=37.5 conn=wye
+~ wdg=2 bus=-99999940765094.1.0 kV=0.069282 kVA=37.5 conn=wye
+New Transformer.293588A606A9EE34E0637F61810A7CE3_3_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40765019.2.0 kV=2.3094 kVA=37.5 conn=wye
+~ wdg=2 bus=-99999940765019.2.0 kV=0.069282 kVA=37.5 conn=wye
+New Transformer.293588A6C5ABEE34E0637F61810A7CE3_4_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764172.2.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764172.2.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588A6C4D0EE34E0637F61810A7CE3_5_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764039.3.0 kV=2.3094 kVA=10 conn=wye
+~ wdg=2 bus=-99999940764039.3.0 kV=0.069282 kVA=10 conn=wye
+New Transformer.293588A6C5A7EE34E0637F61810A7CE3_6_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764064.3.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764064.3.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588B1F8C8EE34E0637F61810A7CE3_7_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764767.1.0 kV=2.3094 kVA=100 conn=wye
+~ wdg=2 bus=-99999940764767.1.0 kV=0.069282 kVA=100 conn=wye
+New Transformer.293588B1F8C8EE34E0637F61810A7CE3_7_1 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764767.2.0 kV=2.3094 kVA=100 conn=wye
+~ wdg=2 bus=-99999940764767.2.0 kV=0.069282 kVA=100 conn=wye
+New Transformer.293588B1F8C8EE34E0637F61810A7CE3_7_2 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764767.3.0 kV=2.3094 kVA=100 conn=wye
+~ wdg=2 bus=-99999940764767.3.0 kV=0.069282 kVA=100 conn=wye
+New Transformer.293588A6C4CDEE34E0637F61810A7CE3_8_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40763964.3.0 kV=2.3094 kVA=37.5 conn=wye
+~ wdg=2 bus=-99999940763964.3.0 kV=0.069282 kVA=37.5 conn=wye
+New Transformer.293588A6C5A8EE34E0637F61810A7CE3_9_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764089.2.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764089.2.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588A6C5A9EE34E0637F61810A7CE3_10_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764118.1.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764118.1.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588A43317EE34E0637F61810A7CE3_11_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764794.2.0 kV=2.3094 kVA=37.5 conn=wye
+~ wdg=2 bus=-99999940764794.2.0 kV=0.069282 kVA=37.5 conn=wye
+New Transformer.293588A6C5ACEE34E0637F61810A7CE3_12_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764197.2.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764197.2.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588A43311EE34E0637F61810A7CE3_13_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764575.1.0 kV=2.3094 kVA=50 conn=wye
+~ wdg=2 bus=-99999940764575.1.0 kV=0.069282 kVA=50 conn=wye
+New Transformer.293588A43310EE34E0637F61810A7CE3_14_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764550.2.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764550.2.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588A4330FEE34E0637F61810A7CE3_15_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764525.3.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764525.3.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588A6C5B3EE34E0637F61810A7CE3_16_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764450.1.0 kV=2.3094 kVA=50 conn=wye
+~ wdg=2 bus=-99999940764450.1.0 kV=0.069282 kVA=50 conn=wye
+New Transformer.293588A6C4CEEE34E0637F61810A7CE3_17_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40763989.3.0 kV=2.3094 kVA=15 conn=wye
+~ wdg=2 bus=-99999940763989.3.0 kV=0.069282 kVA=15 conn=wye
+New Transformer.293588A606ADEE34E0637F61810A7CE3_18_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40765119.2.0 kV=2.3094 kVA=75 conn=wye
+~ wdg=2 bus=-99999940765119.2.0 kV=0.069282 kVA=75 conn=wye
+New Transformer.293588A6C4CFEE34E0637F61810A7CE3_19_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764014.1.0 kV=2.3094 kVA=37.5 conn=wye
+~ wdg=2 bus=-99999940764014.1.0 kV=0.069282 kVA=37.5 conn=wye
+New Transformer.293588A43319EE34E0637F61810A7CE3_20_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764869.1.0 kV=2.3094 kVA=15 conn=wye
+~ wdg=2 bus=-99999940764869.1.0 kV=0.069282 kVA=15 conn=wye
+New Transformer.293588B4C2ACEE34E0637F61810A7CE3_21_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=219416858.1.0 kV=2.3094 kVA=100 conn=wye
+~ wdg=2 bus=-999999219416858.1.0 kV=0.159926 kVA=100 conn=wye
+New Transformer.293588B4C2ACEE34E0637F61810A7CE3_21_1 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=219416858.2.0 kV=2.3094 kVA=100 conn=wye
+~ wdg=2 bus=-999999219416858.2.0 kV=0.159926 kVA=100 conn=wye
+New Transformer.293588B4C2ACEE34E0637F61810A7CE3_21_2 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=219416858.3.0 kV=2.3094 kVA=100 conn=wye
+~ wdg=2 bus=-999999219416858.3.0 kV=0.159926 kVA=100 conn=wye
+New Transformer.293588A4331CEE34E0637F61810A7CE3_22_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764969.1.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764969.1.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588A6C5B2EE34E0637F61810A7CE3_23_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764425.3.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764425.3.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588A6C5B1EE34E0637F61810A7CE3_24_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764400.3.0 kV=2.3094 kVA=15 conn=wye
+~ wdg=2 bus=-99999940764400.3.0 kV=0.069282 kVA=15 conn=wye
+New Transformer.293588A43313EE34E0637F61810A7CE3_25_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764625.1.0 kV=2.3094 kVA=10 conn=wye
+~ wdg=2 bus=-99999940764625.1.0 kV=0.069282 kVA=10 conn=wye
+New Transformer.293588A90264EE34E0637F61810A7CE3_26_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=140969745.3.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-999999140969745.3.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588A43312EE34E0637F61810A7CE3_27_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764600.1.0 kV=2.3094 kVA=15 conn=wye
+~ wdg=2 bus=-99999940764600.1.0 kV=0.069282 kVA=15 conn=wye
+New Transformer.293588A6C5B0EE34E0637F61810A7CE3_28_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764375.2.0 kV=2.3094 kVA=50 conn=wye
+~ wdg=2 bus=-99999940764375.2.0 kV=0.069282 kVA=50 conn=wye
+New Transformer.293588A43316EE34E0637F61810A7CE3_29_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764704.3.0 kV=2.3094 kVA=15 conn=wye
+~ wdg=2 bus=-99999940764704.3.0 kV=0.069282 kVA=15 conn=wye
+New Transformer.293588A6C5AFEE34E0637F61810A7CE3_30_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764296.1.0 kV=2.3094 kVA=16.6667 conn=wye
+~ wdg=2 bus=-99999940764296.1.2 kV=0.069282 kVA=16.6667 conn=delta
+New Transformer.293588A6C5AFEE34E0637F61810A7CE3_30_1 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764296.2.0 kV=2.3094 kVA=16.6667 conn=wye
+~ wdg=2 bus=-99999940764296.2.3 kV=0.069282 kVA=16.6667 conn=delta
+New Transformer.293588A6C5AFEE34E0637F61810A7CE3_30_2 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764296.3.0 kV=2.3094 kVA=16.6667 conn=wye
+~ wdg=2 bus=-99999940764296.3.1 kV=0.069282 kVA=16.6667 conn=delta
+New Transformer.293588A6C5AEEE34E0637F61810A7CE3_31_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764247.2.0 kV=2.3094 kVA=50 conn=wye
+~ wdg=2 bus=-99999940764247.2.0 kV=0.069282 kVA=50 conn=wye
+New Transformer.293588A606ABEE34E0637F61810A7CE3_32_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40765069.1.0 kV=2.3094 kVA=16.6667 conn=wye
+~ wdg=2 bus=-99999940765069.1.2 kV=0.069282 kVA=16.6667 conn=delta
+New Transformer.293588A606ABEE34E0637F61810A7CE3_32_1 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40765069.2.0 kV=2.3094 kVA=16.6667 conn=wye
+~ wdg=2 bus=-99999940765069.2.3 kV=0.069282 kVA=16.6667 conn=delta
+New Transformer.293588A606ABEE34E0637F61810A7CE3_32_2 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40765069.3.0 kV=2.3094 kVA=16.6667 conn=wye
+~ wdg=2 bus=-99999940765069.3.1 kV=0.069282 kVA=16.6667 conn=delta
+New Transformer.293588A6C5ADEE34E0637F61810A7CE3_33_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764222.2.0 kV=2.3094 kVA=100 conn=wye
+~ wdg=2 bus=-99999940764222.2.0 kV=0.069282 kVA=100 conn=wye
+New Transformer.293588A43314EE34E0637F61810A7CE3_34_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764650.1.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764650.1.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588A6C5B4EE34E0637F61810A7CE3_35_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764500.1.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764500.1.2 kV=0.069282 kVA=25 conn=delta
+New Transformer.293588A6C5B4EE34E0637F61810A7CE3_35_1 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764500.2.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764500.2.3 kV=0.069282 kVA=25 conn=delta
+New Transformer.293588A6C5B4EE34E0637F61810A7CE3_35_2 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764500.3.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764500.3.1 kV=0.069282 kVA=25 conn=delta
+New Transformer.293588B4AFF0EE34E0637F61810A7CE3_36_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=212445856.3.0 kV=2.3094 kVA=50 conn=wye
+~ wdg=2 bus=-999999212445856.3.0 kV=0.069282 kVA=50 conn=wye
+New Transformer.293588A4331AEE34E0637F61810A7CE3_37_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764894.1.0 kV=2.3094 kVA=50 conn=wye
+~ wdg=2 bus=-99999940764894.1.0 kV=0.069282 kVA=50 conn=wye
+New Transformer.293588A87890EE34E0637F61810A7CE3_38_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=238940014.3.0 kV=2.3094 kVA=75 conn=wye
+~ wdg=2 bus=-999999238940014.3.0 kV=0.069282 kVA=75 conn=wye
+New Transformer.293588A4331BEE34E0637F61810A7CE3_39_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764919.1.0 kV=2.3094 kVA=14.1667 conn=wye
+~ wdg=2 bus=-99999940764919.1.2 kV=0.069282 kVA=14.1667 conn=delta
+New Transformer.293588A4331BEE34E0637F61810A7CE3_39_1 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764919.2.0 kV=2.3094 kVA=14.1667 conn=wye
+~ wdg=2 bus=-99999940764919.2.3 kV=0.069282 kVA=14.1667 conn=delta
+New Transformer.293588A4331BEE34E0637F61810A7CE3_39_2 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764919.3.0 kV=2.3094 kVA=14.1667 conn=wye
+~ wdg=2 bus=-99999940764919.3.1 kV=0.069282 kVA=14.1667 conn=delta
+New Transformer.293588A43318EE34E0637F61810A7CE3_40_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764819.3.0 kV=2.3094 kVA=25 conn=wye
+~ wdg=2 bus=-99999940764819.3.0 kV=0.069282 kVA=25 conn=wye
+New Transformer.293588A8788FEE34E0637F61810A7CE3_41_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=238939985.1.0 kV=2.3094 kVA=50 conn=wye
+~ wdg=2 bus=-999999238939985.1.0 kV=0.069282 kVA=50 conn=wye
+New Transformer.293588A606A8EE34E0637F61810A7CE3_42_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764994.1.0 kV=2.3094 kVA=30 conn=wye
+~ wdg=2 bus=-99999940764994.1.2 kV=0.069282 kVA=30 conn=delta
+New Transformer.293588A606A8EE34E0637F61810A7CE3_42_1 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764994.2.0 kV=2.3094 kVA=30 conn=wye
+~ wdg=2 bus=-99999940764994.2.3 kV=0.069282 kVA=30 conn=delta
+New Transformer.293588A606A8EE34E0637F61810A7CE3_42_2 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40764994.3.0 kV=2.3094 kVA=30 conn=wye
+~ wdg=2 bus=-99999940764994.3.1 kV=0.069282 kVA=30 conn=delta
+New Transformer.293588A6DF67EE34E0637F61810A7CE3_43_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=203746165.1.0 kV=2.3094 kVA=10 conn=wye
+~ wdg=2 bus=-999999203746165.1.0 kV=0.069282 kVA=10 conn=wye
+New Transformer.293588A606AAEE34E0637F61810A7CE3_44_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40765044.1.0 kV=2.3094 kVA=13.3333 conn=wye
+~ wdg=2 bus=-99999940765044.1.2 kV=0.069282 kVA=13.3333 conn=delta
+New Transformer.293588A606AAEE34E0637F61810A7CE3_44_1 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40765044.2.0 kV=2.3094 kVA=13.3333 conn=wye
+~ wdg=2 bus=-99999940765044.2.3 kV=0.069282 kVA=13.3333 conn=delta
+New Transformer.293588A606AAEE34E0637F61810A7CE3_44_2 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=40765044.3.0 kV=2.3094 kVA=13.3333 conn=wye
+~ wdg=2 bus=-99999940765044.3.1 kV=0.069282 kVA=13.3333 conn=delta
+New Transformer.293588A82AB9EE34E0637F61810A7CE3_45_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=108152643.2.0 kV=2.3094 kVA=75 conn=wye
+~ wdg=2 bus=-999999108152643.2.0 kV=0.069282 kVA=75 conn=wye
+
+Set voltagebases=[4.0 0.277 0.12]
+CalcVoltageBases
+Solve

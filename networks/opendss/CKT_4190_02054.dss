@@ -1,0 +1,58 @@
+! OpenDSS script generated from multiconductor network
+Clear
+
+New Circuit.mc_network basekv=33.0 pu=1.000000 angle=0.00 frequency=60.0 phases=3 Mvasc3=1.08895e+06 Mvasc1=362982
+~ bus1=-8888882132238.1.2.3
+
+! Line codes
+New LineCode.4/0_CLP_3PH_33KV_3 nphases=3 units=km Rmatrix=[ 0.017593 | 0 0.017593 | 0 0 0.017593 ] Xmatrix=[ 0.008752 | 0 0.008752 | 0 0 0.008752 ] Cmatrix=[ 0 | 0 0 | 0 0 0 ]
+New LineCode.2/0_CU_3PH_33KV_3 nphases=3 units=km Rmatrix=[ 0.021393 | 0 0.021393 | 0 0 0.021393 ] Xmatrix=[ 0.032995 | 0 0.032995 | 0 0 0.032995 ] Cmatrix=[ 0 | 0 0 | 0 0 0 ]
+New LineCode.336_ACSR_3PH_33KV_3 nphases=3 units=km Rmatrix=[ 0.115629 | 0 0.115629 | 0 0 0.115629 ] Xmatrix=[ 0.258936 | 0 0.258936 | 0 0 0.258936 ] Cmatrix=[ 0 | 0 0 | 0 0 0 ]
+
+! Lines
+New Line.GS1223-2$VFI1228-1 phases=3 Bus1=33971417.1.2.3 Bus2=72466016.1.2.3 LineCode=4/0_CLP_3PH_33KV_3 Length=0.054328 units=km
+New Line.VFI1228-2$ND33971582 phases=3 Bus1=72466022.1.2.3 Bus2=33971560.1.2.3 LineCode=4/0_CLP_3PH_33KV_3 Length=0.003772 units=km
+New Line.4503500E$GS1223-3 phases=3 Bus1=33971382.1.2.3 Bus2=33971425.1.2.3 LineCode=4/0_CLP_3PH_33KV_3 Length=0.155858 units=km
+New Line.ND33971621$4503500E phases=3 Bus1=33971621.1.2.3 Bus2=33971381.1.2.3 LineCode=2/0_CU_3PH_33KV_3 Length=0.044751 units=km
+New Line.ND241194127$ND33971621 phases=3 Bus1=33971621.1.2.3 Bus2=-77777733971621.1.2.3 LineCode=2/0_CU_3PH_33KV_3 Length=0.071847 units=km
+New Line.ND33971621$02054 phases=3 Bus1=-8888882132238.1.2.3 Bus2=33971621.1.2.3 LineCode=336_ACSR_3PH_33KV_3 Length=0.743795 units=km
+
+! Switches
+New Line.P5500519:VFI1228-2 phases=3 Bus1=72466017.1.2.3 Bus2=72466022.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.5500520:GS1223-1 phases=3 Bus1=33971395.1.2.3 Bus2=33971409.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km enabled=false
+New Line.5500519:VFI1228-1 phases=3 Bus1=72466016.1.2.3 Bus2=72466017.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.GS1223-2$33971423 phases=3 Bus1=33971402.1.2.3 Bus2=33971396.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.GS1223-1$GS1223-2 phases=3 Bus1=33971396.1.2.3 Bus2=33971395.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.5500520:GS1223-3 phases=3 Bus1=33971425.1.2.3 Bus2=33971402.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.5500520:GS1223-2 phases=3 Bus1=33971396.1.2.3 Bus2=33971417.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.33971567$P5500518 phases=3 Bus1=33971560.1.2.3 Bus2=33971561.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.4503500E:4503500E phases=3 Bus1=33971381.1.2.3 Bus2=33971382.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+New Line.BOX_SPRING$MEREDITH_GS1223-1$GS1223-1 phases=3 Bus1=33971409.1.2.3 Bus2=-77777733971409.1.2.3 switch=y r1=0.001 x1=0.001 r0=0.001 x0=0.001 Length=0.001 units=km
+
+! Loads
+New Load.5500518_0 Bus1=-99999933971561.1.0 phases=1 kV=1.38564 kW=0 kvar=0 model=1
+New Load.5500518_1 Bus1=-99999933971561.2.0 phases=1 kV=1.38564 kW=0 kvar=0 model=1
+New Load.5500518_2 Bus1=-99999933971561.3.0 phases=1 kV=1.38564 kW=0 kvar=0 model=1
+
+! Generators
+New Generator.SBP-91992_BATTERY_0 Bus1=-99999933971561.1.0 phases=1 kV=1.38564 kW=3.454 kvar=0 model=7
+New Generator.SBP-91992_BATTERY_1 Bus1=-99999933971561.2.0 phases=1 kV=1.38564 kW=3.454 kvar=0 model=7
+New Generator.SBP-91992_BATTERY_2 Bus1=-99999933971561.3.0 phases=1 kV=1.38564 kW=3.454 kvar=0 model=7
+New Generator.SBP-91992_PHOTOVOLTAIC_0 Bus1=-99999933971561.1.0 phases=1 kV=1.38564 kW=0 kvar=0 model=7
+New Generator.SBP-91992_PHOTOVOLTAIC_1 Bus1=-99999933971561.2.0 phases=1 kV=1.38564 kW=0 kvar=0 model=7
+New Generator.SBP-91992_PHOTOVOLTAIC_2 Bus1=-99999933971561.3.0 phases=1 kV=1.38564 kW=0 kvar=0 model=7
+
+! Transformers
+New Transformer.293588B19A31EE34E0637F61810A7CE3_0_0 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=33971561.1.2 kV=33 kVA=1250 conn=delta
+~ wdg=2 bus=-99999933971561.1.0 kV=1.38564 kVA=1250 conn=wye
+New Transformer.293588B19A31EE34E0637F61810A7CE3_0_1 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=33971561.2.3 kV=33 kVA=1250 conn=delta
+~ wdg=2 bus=-99999933971561.2.0 kV=1.38564 kVA=1250 conn=wye
+New Transformer.293588B19A31EE34E0637F61810A7CE3_0_2 phases=1 windings=2 xhl=0.5 %R=0.353554 %imag=1e-06 %noloadloss=0
+~ wdg=1 bus=33971561.3.1 kV=33 kVA=1250 conn=delta
+~ wdg=2 bus=-99999933971561.3.0 kV=1.38564 kVA=1250 conn=wye
+
+Set voltagebases=[33.0 2.4]
+CalcVoltageBases
+Solve
