@@ -1,4 +1,6 @@
-# opendss
+# Multiconductor branch for comparing power flow with OpenDSS & CYME
+
+Repo has been changed to private so that I could add networks in Multiconductor/OpenDSS/CYME formats.  The multiconductor branch has also been added.  THe OpenDSS and CYME networks have been generated directly from Multiconductor networks.  Comparison results are located in the root directory, the comparsions are for per-unit voltage for phases A, B, & C averaged at the network level.  Detailed bus/node level results are in the validation directory.  The source code for generating the networks, running the load flows, and performing the comparisons are in the notebook in the root directory.
 
 Python package for running OpenDSS power-system analyses through `py_dss_interface`. The package mirrors the multiconductor analysis workflow — power flow, short-circuit, load allocation, hosting capacity — while adding control modules that implement the same algorithms as `multiconductor.control` on top of the OpenDSS solver.
 
